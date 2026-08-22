@@ -1,11 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../Components/Navbar.jsx'
 
 const Layout = () => {
   return (
     <div>
-        Layout
-        <div>
+      
+        <div className='min-h-screen bg-gray-50'>
+            <Navbar/>
             <Outlet/>
         </div>
     </div>
