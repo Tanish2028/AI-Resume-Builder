@@ -6,6 +6,7 @@ import Testimonial from '../Components/home/Testimonial.jsx'
 import CalltoAction from '../Components/home/CalltoAction.jsx'
 import Footer from '../Components/home/Footer.jsx'
 
+
 const Home = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const Home = () => {
         <Testimonial/>
         <CalltoAction />
         <Footer />
+      
     </div>
   )
 }

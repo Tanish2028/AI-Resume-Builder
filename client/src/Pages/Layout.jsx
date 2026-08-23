@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Components/Navbar.jsx'
+import DashBoard from './DashBoard.jsx'
 
 const Layout = () => {
   return (
