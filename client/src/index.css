@@ -11,9 +11,24 @@
     cursor: pointer;
   }
   input:not([type="checkbox"]){
-    @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg;
+    outline: none;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+  }
+  input:not([type="checkbox"]):focus{
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgb(59 130 246 / 0.5);
   }
   textarea{
-     @apply outline-none focus:ring border border-gray-300 focus:ring-blue-500 focus:border-blue-500 rounded-lg resize-none;
+    outline: none;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    resize: none;
+  }
+  textarea:focus{
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgb(59 130 246 / 0.5);
   }
 }
