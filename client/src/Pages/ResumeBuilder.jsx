@@ -7,6 +7,10 @@ import ResumePreview from '../Components/ResumePreview.jsx'
 import TemplateSelector from '../Components/TemplateSelector.jsx'
 import ColorPicker from '../Components/ColorPicker.jsx'
 import ProfessionalSummaryForm from '../Components/ProfessionalSummaryForm.jsx'
+import ExperienceForm from '../Components/ExperienceForm.jsx'
+import EducationForm from '../Components/EducationForm.jsx'
+import ProjectForm from '../Components/ProjectForm.jsx'
+import SkillForm from '../Components/SkillForm.jsx'
 
 const ResumeBuilder = () => {
  
@@ -20,7 +24,7 @@ const ResumeBuilder = () => {
     experience:[],
     education:[],
     project:[],
-    skill:[],
+    skills:[],
     template:'classic',
     accent_color:'#3B82F6',
     public:false,
@@ -107,7 +111,27 @@ const ResumeBuilder = () => {
                   activeSection.id === 'summary' &&(
                     <ProfessionalSummaryForm data={resumeData.professional_summary} onChange={(data)=>setResumeData(prev => ({...prev,professional_summary:data}))} setResumeData={setResumeData}/>
                   )
+                 } 
+                 {
+                  activeSection.id === 'experience' && (
+                    <ExperienceForm data={resumeData.experience} onChange={(data) => setResumeData(prev => ({...prev,experience:data}))}/>
+                  )
                  }
+                 {
+                  activeSection.id === 'education' && (
+                    <EducationForm data={resumeData.education} onChange={(data) => setResumeData(prev => ({...prev,education:data}))}/>)
+                 }
+                 {
+                  activeSection.id === 'projects' && (
+                    <ProjectForm  data={resumeData.project} onChange={(data) => setResumeData(prev => ({...prev,project:data}))}/>
+                  )
+                 }
+                 {
+                  activeSection.id === 'skills' && (
+                    <SkillForm  data={resumeData.skills} onChange={(data) => setResumeData(prev => ({...prev,skills:data}))}/>
+                  )
+                 }
+
                </div>
             </div>
           </div>
