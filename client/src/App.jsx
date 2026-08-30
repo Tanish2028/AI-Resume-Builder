@@ -12,9 +12,10 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='login' element={<Login/>}/>
+        <Route path='view/:resumeId' element={<Preview/>}/>
         <Route path='app' element={<Layout/>}>
           <Route index element={<DashBoard/>}/>
-          <Route index path='view/:resumeId' element={<Preview/>} />
+          <Route path='view/:resumeId' element={<Preview/>} />
           <Route path='builder/:resumeId' element={<ResumeBuilder/>}/>
         </Route>
       </Routes>
