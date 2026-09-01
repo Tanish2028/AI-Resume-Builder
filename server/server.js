@@ -5,6 +5,7 @@ import 'dotenv/config'
 import connectDB from './config/db.js'
 import routes from './Routes/UserRoutes.js'
 import resumeRoute from './Routes/ResumeRoutes.js'
+import aiRoutes from './Routes/AiRoutes.js'
 
 const app = express()
 
@@ -21,6 +22,8 @@ app.get('/',(req,res) =>{
 
 app.use('/api/users',routes)
 app.use('/api/resumes',resumeRoute)
+app.use('/api/ai',aiRoutes)
+
 app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`)
 })
